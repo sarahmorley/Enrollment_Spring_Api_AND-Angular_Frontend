@@ -1,0 +1,14 @@
+<div *ngIf="student">
+    <h2>{{student.name}}'s Details</h2>
+    <div><span>ID: </span>{{student.id}}</div>
+    <div>
+      <label>Name:
+        <input [(ngModel)]="student.name" placeholder="name"/>
+      </label>
+      <label>Address:
+        <input [(ngModel)]="student.address" placeholder="address"/>
+      </label>
+      <button (click)="patchStudent()"> Update Student </button>
+    </div>
+    <button (click)="goBack()">go back</button>
+  </div>
